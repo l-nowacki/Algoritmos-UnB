@@ -2,13 +2,13 @@
 
 int main()
 {
-  float amount;
+  double amount;
   int money;
   int notas_100 = 0, notas_50 = 0, notas_20 = 0, notas_10 = 0, notas_5 = 0, notas_2 = 0;
   int moedas_100 = 0, moedas_50 = 0, moedas_25 = 0, moedas_10 = 0, moedas_5 = 0,
       moedas_1 = 0;
 
-  scanf("%f", &amount);
+  scanf("%lf", &amount);
   money = amount * 100;
 
   while (money > 0) {
@@ -71,6 +71,7 @@ int main()
   printf("%d moeda(s) de R$ 0.10\n", moedas_10);
   printf("%d moeda(s) de R$ 0.05\n", moedas_5);
   printf("%d moeda(s) de R$ 0.01\n", moedas_1);
+
   
   return 0;
 }
