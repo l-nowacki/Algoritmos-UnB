@@ -13,7 +13,5 @@ int main()
 
   printf("%d eh o maior\n", maior);
 
-  
-  
   return 0;
 }
