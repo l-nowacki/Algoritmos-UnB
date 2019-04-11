@@ -3,15 +3,15 @@
 
 int main()
 {
-  int N, i, j, k, test = 1;
+  long long N, i, j, k, test = 1;
   
-  scanf("%d", &N);
-  int array[N][N], now;
+  scanf("%lld", &N);
+  long long array[N][N], now;
 
   
   for (i = 0; i < N; ++i) {
     for (j = 0; j < N; ++j) {
-      scanf("%d", &now);
+      scanf("%lld", &now);
       //only retain array information if it is on a diagonal
       if (i == j || i + j == N - 1) {
 	array[i][j] = now;
