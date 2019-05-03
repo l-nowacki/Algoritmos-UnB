@@ -1,0 +1,59 @@
+* DONE 1. Crie uma pequena introdução de um mundo fantástico e conte ao jogador onde ele se encontra.
+* DONE 2. O jogador pode escolher entre 3 opções enumeradas
+* TODO 3. A partir da decisão do jogador insira uma pequena narrativa
+* TODO 4. O ALINHAMENTO do jogador eliminará alguma possibilidade.
+
+  - Essa pode ser a forma de locomoção que ele usa para ir até o ICC norte.
+    A primeira é pegar o transminhocão.
+    A segunda é ir caminhando.
+    A terceira é roubar uma bike.
+
+  - Se o jogador tiver o alinhamento do bem ele não pode escolher roubar a bike.
+
+* TODO 5. A partir da decisão do jogador insira uma pequena narrativa
+
+  - Se o jogador escolher pegar o transminhocão ele é um Noob. Mas ele fica esperando até que a vala se encha de água. E ele use uma espuma gigante como um barco para
+    chegar no icc norte. Até que ocorre um bloqueio e ele têm que sair.
+  - Se o jogador escolher roubar a bike ele é confrontado pelo dono da bike.
+  - Se ele for caminhando ele fica ensopado pela chuva.
+
+* TODO 6. Uma opção que fará o jogador VOLTAR AO PASSO 4 e outra opção que irá se basear na DISCIPLINA do personagem 
+
+  - A opção que fará o jogador voltar para o passo 4 pode ser que ele fique inconsciente e seja colocado num barco para o ICC sul. Depois de levar um soco na cara.
+
+  - 
+
+  - Se o jogador for de direito ele é capaz de conversar o seu jeito da situação.
+  - Se o jogador for de CC ele é capaz de hackear a UnB devido a ausência de proteção de certificado da Universidade.
+  - Se o jogador for de Medicina ele pergunta se a pessoa está bem. E depois corta a pessoa. Entedia a pessoa falando que ele passou em medicina.
+
+
+* TODO 7. A partir da decisão do jogador insira uma pequena narrativa
+
+  
+
+* TODO 8. O jogador joga JOKENPÔ contra a maquina para poder acessar o último evento. 
+
+  - O jokenpo tem que ser uma maneira de bloquear a meta do jogador. Logo ele deve ser diferente para cada Meta.
+
+  - Para salvar a UnB o jogador têm que puxar um grande ralo no subsolo da UnB. Mas ele é muito fraco para fazer isso sozinho. 
+    Ele encontra o silveirinha. E convence ele a ajuda-lo se ganhar dele em JOKENPO. O silveirinha depois se joga no ralo.
+
+  - Para escapar da UnB o jogador precisa de ajuda para pular o muro que está trancado. E só o silveirinha pode ajudá-lo.
+
+  - Para inundar a sala de aula. O jogador precisa abrir a sala. E só conseguirá fazer isso com ajuda do silverinha.
+
+    - Se o jogador for de medicina. A água entra e destrói equipamentos de laboratório
+
+    - Se o jogador for de direito. A água destrói livros de direito.
+
+    - Se o jogador for de ciências da computação. A água destrói os computadores do laboratório de informática.
+
+* TODO 9. O personagem batalha com uma entidade poderosíssima que apresentará ENIGMAS e o jogador deverá acertar as respostas de 3 CHARADAS
+
+  - Essa entidade pode ser uma prova da disciplina do jogador. E as dicas sobre ela podem se relacionar com a meta do jogador.
+    Se o jogador tiver escolhido como meta inundar a UnB, a prova será feita em casa. E ele pode usar o google para ajudá-lo.
+    Se o jogador tiver conseguido escapar para estudar em casa. As respostas do problema irão aparecer na memória dele.
+    Se o jogador tiver salvado a UnB, ele terá que encarar a prova sozinho.
+
+
