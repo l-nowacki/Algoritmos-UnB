@@ -1,7 +1,11 @@
 * DONE 1. Crie uma pequena introdução de um mundo fantástico e conte ao jogador onde ele se encontra.
 * DONE 2. O jogador pode escolher entre 3 opções enumeradas
-* TODO 3. A partir da decisão do jogador insira uma pequena narrativa
-* TODO 4. O ALINHAMENTO do jogador eliminará alguma possibilidade.
+* DONE 3. A partir da decisão do jogador insira uma pequena narrativa
+  Você está no ICC sul. Um raio. Um trovão. Baques contra o chão. Árvores cairam na
+  saída do ICC sul. Devido ao horário, todas as saídas  laterais estão trancadas. 
+  
+  Sua única saída é pelo ICC norte. Como você chegará lá?
+* DONE 4. O ALINHAMENTO do jogador eliminará alguma possibilidade.
 
   - Essa pode ser a forma de locomoção que ele usa para ir até o ICC norte.
     A primeira é pegar o transminhocão.
@@ -10,23 +14,21 @@
 
   - Se o jogador tiver o alinhamento do bem ele não pode escolher roubar a bike.
 
-* TODO 5. A partir da decisão do jogador insira uma pequena narrativa
+* DONE 5. A partir da decisão do jogador insira uma pequena narrativa
 
   - Se o jogador escolher pegar o transminhocão ele é um Noob. Mas ele fica esperando até que a vala se encha de água. E ele use uma espuma gigante como um barco para
     chegar no icc norte. Até que ocorre um bloqueio e ele têm que sair.
   - Se o jogador escolher roubar a bike ele é confrontado pelo dono da bike.
   - Se ele for caminhando ele fica ensopado pela chuva.
 
-* TODO 6. Uma opção que fará o jogador VOLTAR AO PASSO 4 e outra opção que irá se basear na DISCIPLINA do personagem 
+* TODO 6. Uma opção que fará o jogador VOLTAR AO PASSO 4 e outra opção que irá se basear no PERFIL do personagem 
 
   - A opção que fará o jogador voltar para o passo 4 pode ser que ele fique inconsciente e seja colocado num barco para o ICC sul. Depois de levar um soco na cara.
 
   - 
 
-  - Se o jogador for de direito ele é capaz de conversar o seu jeito da situação.
-  - Se o jogador for de CC ele é capaz de hackear a UnB devido a ausência de proteção de certificado da Universidade.
-  - Se o jogador for de Medicina ele pergunta se a pessoa está bem. E depois corta a pessoa. Entedia a pessoa falando que ele passou em medicina.
 
+** TODO codar a opção que faz  jCogador voltar para o evento 2;
 
 * TODO 7. A partir da decisão do jogador insira uma pequena narrativa
 
