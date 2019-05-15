@@ -31,7 +31,7 @@
 ** TODO codar a opção que faz  jCogador voltar para o evento 2;
 
 * DONE 7. A partir da decisão do jogador insira uma pequena narrativa
-* TODO 8. O jogador joga JOKENPÔ contra a maquina para poder acessar o último evento. 
+* DONE 8. O jogador joga JOKENPÔ contra a maquina para poder acessar o último evento. 
 
 ** sf
 
@@ -128,8 +128,6 @@
     Game Over.
 
 
-  
-   
 * TODO 9. O personagem batalha com uma entidade poderosíssima que apresentará ENIGMAS e o jogador deverá acertar as respostas de 3 CHARADAS
   
   - Essa entidade pode ser uma prova da disciplina do jogador. E as dicas sobre ela podem se relacionar com a meta do jogador.

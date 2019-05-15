@@ -52,13 +52,13 @@ int evento_2_1();
 int evento_3(int perfil);
 // Esta função será o quarto evento do jogo, em que o jogador
 // precisa ganhar uma partida de jokenpo para poder acessar
-// o último evento. Se o jogador perder ele volta para o evento_1().
+// o último evento. Se o jogador perder é game over.
 // Se ele ganhar ele atingiu a meta dele. 
-int evento_4();
+int evento_4(int meta, int disciplina);
 // Este é o último evento do jogo. O jogador faz a prova.
-// Ele depende de vários atributos do jogador. Como a disciplina, meta, e
-// perfil do jogador. Dicas serão apresentadas conforme os atributos.
-int evento_5(int disciplina, int perfil, int meta);
+// Ele depende de vários atributos do jogador. Como a disciplina e meta
+// do jogador.
+int evento_5(int disciplina, int meta);
 
 
 // Esta função implementa uma rodada de jokênpo.
@@ -75,12 +75,61 @@ int melhor_de_3();
 int resultado_partida();
 
 
+// Esta função gera um número inteiro aleatória de 1 a 6 para
+// escolher uma questão
+int num_aleatorio();
+// Esta função aceita um número de 1 a 6 e uma disciplina
+// e invoca uma questao.
+// Retorna 1 se a questão foi acertada. E 0 caso seja errada.
+int selecionador_de_questoes(int disciplina, int num);
+// Esta função permite o erro de uma questão. Ou seja,
+// caso o jogador erre uma vez. Esta função invoca a
+// a mesma questão. E se o jogador errar duas vezes
+// imprime game over.
+// Retorna 1 se o jogador passar. E 0 se não passar
+int repetidor_de_questao(int disciplina, int num);
+// Esta função age como o sub-programa tres_charadas
+// as charadas são quesões de uma prova. Selecionadas
+// a partir da disciplina escolhida pelo jogador.
+// Para cada disciplina há a possibilidade de 6
+// questoes.
+// Sendo assim no conjunto geral a possibilidade de
+// 18 questoes diferentes.
+int tres_charadas(int disciplina);
+
+
+// As funções a seguir são as questões da função tres_charadas.
+// Elas retornam 1 caso tenham sido acertadas. E 0 caso erradas.
+// São seis questões por disciplina.
+// Questões de ciência da computação:
+int questao_cc_1();
+int questao_cc_2();
+int questao_cc_3();
+int questao_cc_4();
+int questao_cc_5();
+int questao_cc_6();
+// Questões de direito:
+int questao_dd_1();
+int questao_dd_2();
+int questao_dd_3();
+int questao_dd_4();
+int questao_dd_5();
+int questao_dd_6();
+// Questões de medicina:
+int questao_med_1();
+int questao_med_2();
+int questao_med_3();
+int questao_med_4();
+int questao_med_5();
+int questao_med_6();
+
+
 int main()
 {
   //texto_inicial();
   //menu_de_entrada();
   //evento_1();
-  iniciar_jogo(1, 2, 3, 1, 1, 1);
+  //iniciar_jogo(2, 2, 2, 3, 2, 2);
   //printf("%d\n", resultado_partida());
 
   return 0;
@@ -275,7 +324,7 @@ int escolher_idade(int disciplina) {
 
 void iniciar_jogo(int disciplina, int alinhamento, int perfil, int meta, int bar, int idade) {
 
-  int escolha_1, escolha_2, escolha_3;
+  int escolha_1, escolha_2, escolha_3, escolha_4;
 
   escolha_1 = evento_1();
   printf("\nA chuva fica ainda mais forte. A UnB começa a alagar.\n"
@@ -288,6 +337,8 @@ void iniciar_jogo(int disciplina, int alinhamento, int perfil, int meta, int bar
       escolha_2 = evento_2(alinhamento);
       escolha_3 = evento_3(perfil);
     } while (escolha_3 == 1);
+
+  escolha_4 = evento_4(meta, disciplina);
 
 
 }
@@ -356,7 +407,7 @@ int evento_2(int alinhamento) {
     printf("\nVocê sai correndo pela UnB. A chuva continua forte. Um raio acerta a UnB.\n"
 	   "\nFelizmente, você está usando chinelos. Eles te salvam.\n"
 	   "\nNo entanto, você vê um estudante de 2 metros de altura atordoado no chão.\n"
-	   "\nEle se levanta e olha para você. Depois olha para a mão dele. E para você de novo\n");
+	   "\nEle se levanta e olha para você. Depois olha para a mão dele. E para você de novo.\n");
   }
 
   return choice;
@@ -384,7 +435,6 @@ int evento_2_1() {
   return 1;
 
 }
-
 
 
 int evento_3(int perfil) {
@@ -437,8 +487,8 @@ int evento_3(int perfil) {
 	     " do minhocão. O gigante também pula. Mas seu peso massivo faz com que ele"
 	     " caia.\n");
     } else if (perfil == 3) {
-      printf("\nO gigante fica envergonhado. E diz que irá te deixar livre se você\n"
-	     " apagar as fotos. Você fica desconfiado. Mas depois de um juramento "
+      printf("\nO gigante fica envergonhado. E diz que irá te deixar livre se você"
+	     " apagar as fotos.\nVocê fica desconfiado. Mas depois de um juramento "
 	     "de mindinho. Você apaga as fotos. E ele te deixa livre.\n");
     }
     
@@ -446,6 +496,79 @@ int evento_3(int perfil) {
   
   return choice;
 }
+
+
+int evento_4(int meta, int disciplina) {
+
+  int resultado;
+
+  printf("\nVocê acaba de se livrar do gigante. E está quase no final do ICC norte.\n");
+
+  if (meta == 1) {
+    printf("\nVocê desce para o subsolo. Lá encontra um ralo gigante."
+	   " Se você for capaz de destampá-lo. Salvaria a UnB da "
+           "enchente\n"
+	   "\nVocê puxa a corda. Mas o ralo é muito pesado para você fazer"
+	   " isso sozinho\n");
+  } else if (meta == 2) {
+    printf("\nVocê chega no final do Minhocão. Mas a entrada está fechada.\n" 
+	   "Você tenta pular a grade. \n"
+	   "\nMas você está cansado.\n"
+	   "\nLogo não consegue fazer isso sozinho.\n");
+  } else if (meta == 3) {
+    printf("\nVocê desce para o subsolo. Lá encontra a sala onde será\n"
+	   "realizada a prova no dia seguinte\n"
+	   "\nVocê tenta forçar a porta para inundar a sala. Mas ela está trancada.\n"
+	   "Você precisa de mais alguêm para arromba-la\n");
+  }
+
+  printf("\nVocê volta para o piso central para tentar encontrar ajuda.\n"
+	 "A única alma a vista é a de silveirinha.\n"
+	 "\nO andarilho místico da UnB.\n"
+	 "\nVocê conta a história para ele. E pede para que ele o ajude.\n"
+         "\nEle aceita. Mas só se você derrotar ele numa partida de jokenpo.\n"
+	 "\nMas ele te avisa que se você perder a sua alma será dele para sempre.\n"
+	 "\nVocê aceita.\n");
+
+
+  resultado = resultado_partida();
+  
+  if (resultado) {
+    if (meta == 1) {
+      printf("\nCom a ajuda do Silveirinha você consegue puxar o ralo da UnB.\n"
+	     "\nAssim salvando a Universidade da enchente.\n");
+    } else if (meta == 2) {
+      printf("\nCom a ajuda do Silveirinha você consegue pular as entradas da UnB\n"
+	     "\nVocê oferece ajudá-lo. Mas ele recusa.\n"
+	     "\nEle pula nas poças da UnB.\n"
+	     "\nNadando como um peixinho fora d'água.\n");
+    } else if (meta == 3) {
+      printf("\nCom a ajuda do Silveirinha você consegue quebrar a porta do espaço.\n");
+      if (disciplina == 1) {
+	printf("\nA água toma conta da sala. Destruindo todos os computadores da sala.\n"
+	       "\nAlguns computadores explodem.\n"
+	       "\nSó para deixar a cena mais legal.\n");
+      } else if (disciplina == 2) {
+	printf("\nA água toma conta da sala. Os vários livros de direito com a foto\n"
+	       "do seu professor na contracapa são destruídos.\n"
+	       "\nUm estranho senso de justiça formiga no seu corpo.\n");
+      } else if (disciplina == 3) {
+	printf("\nA água toma conta do laboratório. Os microscópios e bisturis são destruídos.\n"
+	       "\nUm esqueleto boia para fora da sala\n");
+      }   
+    }
+  } else {
+    printf("\nVocê perdeu a partida de jokenpo.\n"
+	   "\nSilveirinha convoca o poder sobre sua alma e a coloca no bolso dele.\n"
+	   "\nNo bolso dele há um resto de cachorro quente.\n"
+	   "\nGAME OVER\n");
+    return 0;
+  }
+
+  return 1;
+  
+}
+
 
 int jokenpo() {
 
@@ -462,21 +585,21 @@ int jokenpo() {
   maq = 1 + (rand() % 3);
 
   if (maq == 1) {
-    printf("\nMaquina escolheu pedra\n");
+    printf("\nSilveirinha escolheu pedra\n");
   } else if (maq == 2) {
-    printf("\nMaquina escolheu papel\n");
+    printf("\nSilveirinha escolheu papel\n");
   } else if (maq == 3) {
-    printf("\nMaquina escolheu tesoura\n");
+    printf("\nSilveirinha escolheu tesoura\n");
   }
 
   if (jgr == maq) {
     printf("\nEmpate\n");
     return 0;
   } else if (jgr == 1 && maq == 3 || jgr == 2 && maq == 1 || jgr == 3 && maq == 2) {
-    printf("\nJogador Ganhou\n");
+    printf("\nVocê ganhou a rodada\n");
     return 1;
   } else {
-    printf("\nMáquina ganhou\n");
+    printf("\nSilveirinha ganhou a rodada\n");
     return -1;
   }
 
@@ -511,13 +634,13 @@ int resultado_partida() {
       resultado = melhor_de_3();
 
       if (resultado > 0) {
-	printf("\nJogador ganhou a melhor de três\n");
+	printf("\nVocê ganhou a melhor de três\n");
 	return 1;
       } else if (resultado < 0) {
-	printf("\nMaquina ganhou a melhor de três\n");
+	printf("\nSilveirinha ganhou a melhor de três\n");
 	return 0;
       } else {
-	printf("\nEmpate na melhor de três\n");
+	printf("\nEmpate na melhor de três, você irá jogar novamente\n");
       }	
     } while (resultado == 0);
 
