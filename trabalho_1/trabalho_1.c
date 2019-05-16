@@ -123,6 +123,17 @@ int questao_med_4();
 int questao_med_5();
 int questao_med_6();
 
+// Esta função imprime uma mensagem dizendo se o jogador acertou uma
+// questão
+int respondedor(int valor) {
+
+  if (valor == 1) {
+    printf("Você acertou a questão\n");
+  } else {
+    printf("Você errou a questão\n");
+  }
+  
+}
 
 int main()
 {
@@ -131,7 +142,13 @@ int main()
   //evento_1();
   //iniciar_jogo(2, 2, 2, 3, 2, 2);
   //printf("%d\n", resultado_partida());
-
+  respondedor(questao_med_1());
+  respondedor(questao_med_2());
+  respondedor(questao_med_3());
+  respondedor(questao_med_4());
+  respondedor(questao_med_5());
+  respondedor(questao_med_6());
+  
   return 0;
 }
 
@@ -646,4 +663,479 @@ int resultado_partida() {
 
   return resultado;
     
+}
+
+
+int questao_cc_1() {
+
+  int choice;
+  
+  printf("\nQual das seguintes formas não é uma representação "
+	 "do pequeno teorema de Fermat?\n"
+         "Sendo p um número primo e a um número inteiro.\n");
+  
+  do
+    {
+      printf("\n1. p | a^p - a\n");
+      printf("2. a^p ≅ a (mod p)\n");
+      printf("3. a^(p-1) ≅ 2 (mod p)\n");
+
+      scanf("%d", &choice);
+      
+    } while (escolha_invalida(choice));
+
+  if (choice == 3) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_cc_2() {
+
+  int choice;
+
+
+  printf("\nDentre as seguintes opções para o tempo de um algoritmo, "
+	 "qual é a menos eficiente?\n");
+  
+  do
+    {
+      printf("\n1. linearitmico - O(n log n)\n");
+      printf("2. linear - O(n)\n");
+      printf("3. logaritmico - O(log n)\n");
+
+      scanf("%d", &choice);
+      
+    } while (escolha_invalida(choice));
+
+  if (choice == 1) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_cc_3() {
+
+  int choice;
+
+
+  printf("\n32 times qualificaram para a copa do mundo de 2018, "
+	 "se os nomes dos times fosse arranjandos em ordem "
+	 "alfabética - numa array - quantos itens na array um "
+	 "algoritmo de escolha binária teria que examinar "
+	 "para encontrar um time em particular, no pior caso?\n");
+  
+  do
+    {
+      printf("\n1. No máximo, 32 times\n");
+      printf("2. No máximo, 16 times\n");
+      printf("3. No máximo, 6 times\n");
+
+      scanf("%d", &choice);
+      
+    } while (escolha_invalida(choice));
+
+  if (choice == 3) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_cc_4() {
+
+  int choice;
+
+
+  printf("\nDentre as seguintes alternativas, qual não é um "
+	 "princípio de POO (programação orientada a objetos)?\n ");
+  
+  do
+    {
+      printf("\n1. Encapsulamento\n");
+      printf("2. Polimorfismo\n");
+      printf("3. Identidade\n");
+
+      scanf("%d", &choice);
+      
+    } while (escolha_invalida(choice));
+
+  if (choice == 3) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_cc_5() {
+
+  int choice;
+
+
+  printf("\nUm byte contém quantos bits?\n");
+  
+  do
+    {
+      printf("\n1. 8\n");
+      printf("2. 2⁸\n");
+      printf("3. 256\n");
+
+      scanf("%d", &choice);
+      
+    } while (escolha_invalida(choice));
+
+  if (choice == 1) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_cc_6() {
+
+  int choice;
+
+
+  printf("\nO tipo de cálculo característico de linguagens funcionais é o:\n");
+  
+  do
+    {
+      printf("\n1. Lambda\n");
+      printf("2. Beta\n");
+      printf("3. Continuo\n");
+
+      scanf("%d", &choice);
+      
+    } while (escolha_invalida(choice));
+
+  if (choice == 1) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+
+int questao_dd_1() {
+
+  int choice;
+
+
+  printf("\nA individualização da pena será regulamentada por lei. \n"
+	 "E dentro as penas admissíveis, não figura:\n");
+  
+  do
+    {
+      printf("\n1. privação ou restrição de liberdade\n");
+      printf("2. de trabalhos forçadosa\n");
+      printf("3. prestação social afirmativa\n");
+
+      scanf("%d", &choice);
+      
+    } while (escolha_invalida(choice));
+
+  if (choice == 2) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_dd_2() {
+
+  int choice;
+
+
+  printf("\nAssinale dentre as afirmativas expostas, a sentença \n"
+	 "verdadeira em relação dos direitos e deveres individuais \n"
+	 "e coletivos:\n");
+  
+  do
+    {
+      printf("\n1. É livre a locomoção em tempo de paz, no território nacional, \n"
+	     "permitindo a todos entrarem, saírem ou permanecerem nele com seus bens\n");
+      printf("2. É plena a liberdade de associações para fins lícitos e paramilitares\n");
+      printf("3. É garantido a todos o acesso à informação, sendo sempre sua fonte\n "
+	     "pública a todo, uma vez que no art. 5° é vedado o anonimato\n");
+
+      scanf("%d", &choice);
+      
+    } while (escolha_invalida(choice));
+
+  if (choice == 1) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_dd_3() {
+
+  int choice;
+
+
+  printf("\nNão é permitido, segundo o art. 5° da Constituição Federal: \n");
+  
+  do
+    {
+      printf("\n1. a dissolução ou suspensão compulsória de atividades da associação \n"
+	     "por simples decisão judicial desde que transitada em julgado\n");
+      printf("2. compelir alguém a associar-se ou a permanecer associado de algo\n");
+      printf("3. a criação de associações independem de autorização, sendo vedada a \n "
+	     "interferência estatal em seu funcionamento\n");
+
+      scanf("%d", &choice);
+      
+    } while (escolha_invalida(choice));
+
+  if (choice == 2) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_dd_4() {
+
+  int choice;
+
+
+  printf("\nA propriedade intelectual garante: \n");
+  
+  do
+    {
+      printf("\n1. a propriedade industrial e os direitos do autor \n");
+      printf("2. a criação particular e a industrial\n");
+      printf("3. a posse de meios para a criação intelectual de projetos \n ");
+
+      scanf("%d", &choice);
+      
+    } while (escolha_invalida(choice));
+
+  if (choice == 1) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_dd_5() {
+
+  int choice;
+
+
+  printf("\nA Constituição de 1988, reconhece a instituição do júri, porém não assegura: \n");
+  
+  do
+    {
+      printf("\n1. o sigilo de votações\n");
+      printf("2. a competência para o julgamento dos crimes dolosos e culposos contra a vida\n");
+      printf("3. a soberania dos veredictos \n ");
+
+      scanf("%d", &choice);
+      
+    } while (escolha_invalida(choice));
+
+  if (choice == 2) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_dd_6() {
+
+  int choice;
+
+  printf("\nA República Federativa do Brasil não tem como fundamento: \n");
+
+  do
+    {
+      printf("\n1. a soberania\n");
+      printf("2. o pluralismo político\n");
+      printf("3. garantia de desenvolvimento nacional\n");
+
+      scanf("%d", &choice);
+
+    } while (escolha_invalida(choice));
+
+  if (choice == 3) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+
+int questao_med_1() {
+
+  int choice;
+
+  printf("\nCom relação a imunologia, julgue os itens subsequentes. \n");
+
+  do
+    {
+      printf("\n1. O leite materno possui anticorpos que são tranferidos da mãe para o filho, \n"
+	     "caracterizando a imunidade do tipo celular\n");
+      printf("2. Suponha que uma criança tenha recebido uma vacina contra determinada doença \n"
+	     "nos meses de janeiro, julho e dezembro do mesmo ano. Nesse caso, é correto \n"
+	     "afirmar que a quantidade de anticorpos produzida pelo organismo é maior em dezembro \n"
+	     "que em janeiro\n");
+      printf("3. Os linfócitos A e D estão envolvidos na imunidade ativa\n");
+
+      scanf("%d", &choice);
+
+    } while (escolha_invalida(choice));
+
+  if (choice == 2) {
+    return 1;
+  } else {
+    return 0;
+  }
+
+}
+
+int questao_med_2() {
+
+  int choice;
+
+  printf("\nDesde o surgimento da gripe suína, vacinas têm sido desenvolvidas na tentativa de \n"
+	 "estabelecer um método de proteção para a população. Assinale a alternativa que \n"
+	 "apresenta o mecanismo clássico de imunização em que se baseiam as vacinas. \n");
+
+  do
+    {
+      printf("\n1. Imunização ativa - mecanismo, segundo o qual se introduz uma pequena quantidade de \n"
+	     "antígenos no organismo para produção de anticorpos\n");
+      printf("2. Imunização passiva - mecanismo, segundo o qual se introduz uma grande quantidade de \n"
+	     "antígenos para a produção de anticorpos\n");
+      printf("3. Imunização sativa - mecanismo, segundo o qual se introduz uma grade quantidade de \n"
+	     "elementos no organismo para a produção de ideias\n");
+
+      scanf("%d", &choice);
+
+    } while (escolha_invalida(choice));
+
+  if (choice == 1) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_med_3() {
+
+  int choice;
+
+  printf("\nA vacina contra o H1N1, assim como qualquer outra vacina contra agentes causadores de doenças \n"
+	 "infectocontagiosas, aumenta a imunidade porque: \n");
+
+  do
+    {
+      printf("\n1. estimula a produção de glóbulos vermelhos pela medula óssea\n");
+      printf("2. possui linfócitos B e T que neutralizam o agente causador da doença\n");
+      printf("3. estimula a produção de anticorpos contra o agente causador da doença\n");
+
+      scanf("%d", &choice);
+
+    } while (escolha_invalida(choice));
+
+  if (choice == 3) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_med_4() {
+
+  int choice;
+
+  printf("\nNo caso de transplantes de orgãos, o processo de aceitação/rejeição do órgão transplantado \n"
+	 "pelo indivíduo receptor está diretamente relacionado à(ao): \n");
+
+  do
+    {
+      printf("\n1. sistema nervoso do receptor\n");
+      printf("2. sistema imunológico do receptor\n");
+      printf("3. sistema operacional linux\n");
+
+      scanf("%d", &choice);
+
+    } while (escolha_invalida(choice));
+
+  if (choice == 2) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_med_5() {
+
+  int choice;
+
+  printf("\nOs lipídios mais conhecidos são os glicerídeos, as ceras, os esteróides e os carotenoides. \n"
+	 "Sobre os lipídios é correto afimar que: \n");
+
+  do
+    {
+      printf("\n1. Eles são majoritariamente hidrofílicos\n");
+      printf("2. O colesterol é um lipídio importante para o corpo humano porque ele compõe as membranas \n"
+	     "celulares e é precursor de hormônios esteroides\n");
+      printf("3. Os lipídios atuam como catalisadores biológicos\n");
+
+      scanf("%d", &choice);
+
+    } while (escolha_invalida(choice));
+
+  if (choice == 2) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
+}
+
+int questao_med_6() {
+
+  int choice;
+
+  printf("\nAs moléculas mais utilizadas pela maioria das células para os processos de conversão de energia e \n"
+	 "produção de ATP (trifosfato de adenosina) são os carboidratos. O armazenamento de lipídeos é vantajoso \n"
+	 "sobre o de carboidratos pelo fato de terem a característica de serem: \n");
+
+  do
+    {
+      printf("\n1. Sexy\n");
+      printf("2. Majoritariamente hidrofóbicos\n");
+      printf("3. Pouco biodegradáveis\n");
+
+      scanf("%d", &choice);
+
+    } while (escolha_invalida(choice));
+
+  if (choice == 2) {
+    return 1;
+  } else {
+    return 0;
+  }
+  
 }

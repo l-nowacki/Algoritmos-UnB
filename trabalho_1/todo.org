@@ -31,7 +31,7 @@
 ** TODO codar a opção que faz  jCogador voltar para o evento 2;
 
 * DONE 7. A partir da decisão do jogador insira uma pequena narrativa
-* TODO 8. O jogador joga JOKENPÔ contra a maquina para poder acessar o último evento. 
+* DONE 8. O jogador joga JOKENPÔ contra a maquina para poder acessar o último evento. 
 
 ** sf
 
@@ -128,8 +128,6 @@
     Game Over.
 
 
-  
-   
 * TODO 9. O personagem batalha com uma entidade poderosíssima que apresentará ENIGMAS e o jogador deverá acertar as respostas de 3 CHARADAS
   
   - Essa entidade pode ser uma prova da disciplina do jogador. E as dicas sobre ela podem se relacionar com a meta do jogador.
@@ -172,6 +170,114 @@
 
   10 questões para cada
 
+** Questões de ciência da computação
+
+   1. Qual das seguintes formas não é uma representação do pequeno teorema de Fermat?
+      Sendo p como um número primo e a um número inteiro.
+
+      1. p | a^p - a
+
+      2. a^p ≅ a (mod p)
+
+      3. a^(p-1) ≅ 2 (mod p) - certa
+
+   2. Dentre as seguintes opções para o tempo de um algoritmo, qual é a menos eficiente?
+
+      1. linearitmico - O(n log n) - certa
+
+      2. linear - O(n)
+
+      3. logaritmico - O(log n)
+
+   3. 32 times qualificaram para a copa do mundo de 2018, se os nomes dos times fosse arranjandos
+      em ordem alfabética - numa array - quantos itens na array um algoritmo de escolha binária teria 
+      que examinar para encontrar um time em particular, no pior caso?
+
+      1. No máximo, 32 times
+
+      2. No máximo, 16 times
+
+      3. No máximo, 6 times - certa
+
+   4. Dentre as seguintes alternativas, qual não é um princípio de POO (programação orientada a objetos)?
+
+      1. Encapsulamento
+
+      2. Polimorfismo
+
+      3. Identidade - certa
+ 
+   5. Um byte contém quantos bits?
+
+      1. 8 - certa
+
+      2. 1024
+
+      3. 256
+
+   6. O tipo de cálculo característico de linguagens funcionais é o:
+
+      1. Lambda - certo
+
+      2. Beta
+
+      3. Continuo
+
+** Questões de direito
+
+   1. A individualização da pena será regulamentada por lei. E dentre as penas admissíveis,
+      não figura:
+
+      1. privação ou restrição de liberdade
+
+      2. de trabalhos forçados - certa
+
+      3. prestação social alternativa
+
+   2. Assinale dentre as afirmativas expostas, a sentença verdadeira em relação dos 
+      direitos e deveres individuais e coletivos:
+
+      1. é livre a locomoção em tempo de paz, no território nacional, permitindo a
+	 todos entrarem, saírem ou permanecerem nele com seus bens - certa
+
+      2. é plena a liberdade de associações para fins lícitos e paramilitares
+
+      3. é garantido a todos o acesso à informaçãom, sendo sempre sua fonte pública
+	 a todos, uma vez que no art. 5° é vedado o anonimato
+
+   3. Não é permitido, segundo o art. 5° da Constituição Federal:
+      
+      1. a dissolução ou suspensão compulsória de atividades da associação por
+	 simples decisão judicial desde que transitada em julgado
+
+      2. compelir alguém a associar-se ou a permanecer associado de algo - certa
+
+      3. a criação de associações independem de autorização, sendo vedada a
+	 interferência estatal em seu funcionamento
+
+   4. A propriedade industrial garante:
+
+      1. a propriedade insustrial e os direitos do autor - certa
+
+      2. a criação particular e a industrial
+
+      3. a posse de meios para a criação intelectual de projetos
+
+   5. A Constituição de 1988, reconhece a instituição do júri, porém não assegura:
+
+      1. o sigilo de votações
+
+      2. a competência para o julgamento dos crimes dolosos e culposos contra a vida - certa
+
+      3. a soberania dos veredictos
+
+   6. A República Federativa do Brasil não tem como fundamento:
+
+      1. soberania
+
+      2. o pluralismo político
+
+      3. garantia do desenvolvimento nacional - 
 ** Questões de medicina:
 
   1. Com relação a imunologia, julgue os itens subsequentes.
@@ -243,111 +349,3 @@
      2. Majoritariamente hidrofóbicos - certa
 
      3. Pouco biodegradáveis
-
-** Questões de direito
-
-   1. A individualização da pena será regulamentada por lei. E dentre as penas admissíveis,
-      não figura:
-
-      1. privação ou restrição de liberdade
-
-      2. de trabalhos forçados - certa
-
-      3. prestação social alternativa
-
-   2. Assinale dentre as afirmativas expostas, a sentença verdadeira em relação dos 
-      direitos e deveres individuais e coletivos:
-
-      1. é livre a locomoção em tempo de paz, no território nacional, permitindo a
-	 todos entrarem, saírem ou permanecerem nele com seus bens - certa
-
-      2. é plena a liberdade de associações para fins lícitos e paramilitares
-
-      3. é garantido a todos o acesso à informaçãom, sendo sempre sua fonte pública
-	 a todos, uma vez que no art. 5° é vedado o anonimato
-
-   3. Não é permitido, segundo o art. 5° da Constituição Federal:
-      
-      1. a dissolução ou suspensão compulsória de atividades da associação por
-	 simples decisão judicial desde que transitada em julgado
-
-      2. compelir alguém a associar-se ou a permanecer associado de algo - certa
-
-      3. a criação de associações independem de autorização, sendo vedada a
-	 interferência estatal em seu funcionamento
-
-   4. A propriedade industrial garante:
-
-      1. a propriedade insustrial e os direitos do autor - certa
-
-      2. a criação particular e a industrial
-
-      3. a posse de meios para a criação intelectual de projetos
-
-   5. A Constituição de 1988, reconhece a instituição do júri, porém não assegura:
-
-      1. o sigilo de votações
-
-      2. a competência para o julgamento dos crimes dolosos e culposos contra a vida - certa
-
-      3. a soberania dos veredictos
-
-   6. A República Federativa do Brasil não tem como fundamento:
-
-      1. soberania
-
-      2. o pluralismo político
-
-      3. garantia do desenvolvimento nacional - 
-** Questões de ciência da computação
-
-   1. Qual das seguintes formas não é uma representação do pequeno teorema de Fermat?
-      Sendo p como um número primo e a um número inteiro.
-
-      1. p | a^p - a
-
-      2. a^p ≅ a (mod p)
-
-      3. a^(p-1) ≅ 2 (mod p) - certa
-
-   2. Dentre as seguintes opções para o tempo de um algoritmo, qual é a menos eficiente?
-
-      1. linearitmico - O(n log n) - certa
-
-      2. linear - O(n)
-
-      3. logaritmico - O(log n)
-
-   3. 32 times qualificaram para a copa do mundo de 2018, se os nomes dos times fosse arranjandos
-      em ordem alfabética - numa array - quantos itens na array um algoritmo de escolha binária teria 
-      que examinar para encontrar um time em particular, no pior caso?
-
-      1. No máximo, 32 times
-
-      2. No máximo, 16 times
-
-      3. No máximo, 6 times - certa
-
-   4. Dentre as seguintes alternativas, qual não é um princípio de POO (programação orientada a objetos)?
-
-      1. Encapsulamento
-
-      2. Polimorfismo
-
-      3. Identidade - certa
- 
-   5. Um byte contém quantos bits?
-
-      1. 8 - certa
-
-      2. 1024
-
-      3. 256
-
-   6. O tipo de cálculo característico de linguagens funcionais é o:
-
-      1. Lambda - certo
-
-      2. Beta
-
-      3. Continuo
