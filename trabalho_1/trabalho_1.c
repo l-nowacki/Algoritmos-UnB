@@ -123,32 +123,12 @@ int questao_med_4();
 int questao_med_5();
 int questao_med_6();
 
-// Esta função imprime uma mensagem dizendo se o jogador acertou uma
-// questão
-int respondedor(int valor) {
-
-  if (valor == 1) {
-    printf("Você acertou a questão\n");
-  } else {
-    printf("Você errou a questão\n");
-  }
-  
-}
 
 int main()
 {
-  //texto_inicial();
-  //menu_de_entrada();
-  //evento_1();
-  //iniciar_jogo(2, 2, 2, 3, 2, 2);
-  //printf("%d\n", resultado_partida());
-  respondedor(questao_med_1());
-  respondedor(questao_med_2());
-  respondedor(questao_med_3());
-  respondedor(questao_med_4());
-  respondedor(questao_med_5());
-  respondedor(questao_med_6());
-  
+  texto_inicial();
+  menu_de_entrada();
+
   return 0;
 }
 
@@ -198,7 +178,6 @@ void menu_de_entrada() {
       } else if (escolha_menu == 2 && personagem_criado == 0) {
 	printf("\nÉ preciso criar um personagem antes de iniciar o jogo\n");
       } else if (escolha_menu == 2 && personagem_criado == 1) {
-	sair_do_menu = 1;
 	iniciar_jogo(disciplina, alinhamento, perfil, meta, bar, idade);
       } else {
 	sair_do_menu = 1;
@@ -341,7 +320,7 @@ int escolher_idade(int disciplina) {
 
 void iniciar_jogo(int disciplina, int alinhamento, int perfil, int meta, int bar, int idade) {
 
-  int escolha_1, escolha_2, escolha_3, escolha_4;
+  int escolha_1, escolha_2, escolha_3, escolha_4, escolha_5;
 
   escolha_1 = evento_1();
   printf("\nA chuva fica ainda mais forte. A UnB começa a alagar.\n"
@@ -356,6 +335,12 @@ void iniciar_jogo(int disciplina, int alinhamento, int perfil, int meta, int bar
     } while (escolha_3 == 1);
 
   escolha_4 = evento_4(meta, disciplina);
+
+  if (escolha_4) {
+    escolha_5 = evento_5(disciplina, meta);
+  } else {
+    return;
+  }
 
 
 }
@@ -400,7 +385,7 @@ int evento_2(int alinhamento) {
       printf("\n1 - Pegando o Transminhocão\n");
       printf("2 - Batendo o chinelo\n");
 
-      if (alinhamento != 1) {
+      if (alinhamento != 3) {
 	printf("3 - Roubando uma bike que está dando mole\n");
       }
       
@@ -410,7 +395,7 @@ int evento_2(int alinhamento) {
 	evento_2_1();
       }
 
-      if (alinhamento == 1 && choice == 3) {
+      if (alinhamento == 3 && choice == 3) {
 	choice = 0;
       }
       
@@ -585,6 +570,57 @@ int evento_4(int meta, int disciplina) {
   return 1;
   
 }
+
+
+int evento_5(int disciplina, int meta) {
+
+  int resultado;
+
+  printf("\nVocê chega em casa. E se deita na cama. Foi um dia e tanto. \n"
+	 "Você pega o seu celular e entra no grupo de wpp da turma de ");
+
+  if (disciplina == 1) {
+    printf("Ciências da Computação\n");
+  } else if (disciplina == 2) {
+    printf("Direito\n");
+  } else if (disciplina == 3) {
+    printf("Medicina\n");
+  }
+
+  if (meta == 1) {
+    printf("\nUm texto fala sobre a UnB ter sido salva por um estudante desconhecido.\n"
+	   "Você se enche de orgulho. \n"
+	   "\nMas logo abaixo um texto relata a matéria da prova. Você lembra que não \n"
+	   "lembra de nada disso.\n"
+	   "\nMordendo os dentes. Você tenta dormir. A prova do dia seguinte será o seu maior desafio.\n");
+  } else if (meta == 2) {
+    printf("\nUm texto fala sobre a maior parte da UnB ter sido destruída na enchente. Porém, a sua sala sobreviveu. \n"
+	   "\nUm texto abaixo relata as matérias da prova. Você olha para o relógio e percebe que ainda consegue \n"
+	   "estudar um pouco.\n"
+	   "\nVocê vai dormir mais ou menos confiante com a prova.\n");
+  } else if (meta == 3) {
+    printf("\nUm texto fala sobre a sala de aula ter sido destruída na enchente.\n"
+	   "\nUm texto logo abaixo relata a matéria da prova. Mas também diz que ela será realizada em casa. \n"
+	   "\nVocê esboça um sorriso malicioso.\n");
+  }
+
+  resultado = tres_charadas(disciplina);
+
+  if (resultado == 0) {
+    printf("\nAgora a sua vida, basicamente, acabou...\n");
+    printf("\nGAME OVER\n");
+  } else if (resultado == 1) {
+    printf("\nParabéns!! Você concluiu a prova!! E também passou nela!!\n");
+    printf("\nEsperamos que você tenha tido orgulho das suas escolhas\n");
+    printf("\nThe End\n");
+    printf("\nCréditos: Luã Santilli a.k.a nowacki\n");
+  }
+
+  return 1;
+}
+
+
+
 
 
 int jokenpo() {
@@ -835,7 +871,7 @@ int questao_dd_1() {
   do
     {
       printf("\n1. privação ou restrição de liberdade\n");
-      printf("2. de trabalhos forçadosa\n");
+      printf("2. de trabalhos forçados\n");
       printf("3. prestação social afirmativa\n");
 
       scanf("%d", &choice);
@@ -1137,5 +1173,146 @@ int questao_med_6() {
   } else {
     return 0;
   }
+  
+}
+
+
+int num_aleatorio() {
+
+  int resultado;
+
+  srand( time(NULL) );
+  resultado = 1 + (rand() % 6);
+
+  return resultado;
+}
+
+
+int selecionador_de_questoes(int disciplina, int num) {
+
+  if (disciplina == 1) {
+    switch (num) {
+    case 1: {
+      return questao_cc_1();
+    }
+    case 2: {
+      return questao_cc_2();
+    }
+    case 3: {
+      return questao_cc_3();
+    }
+    case 4: {
+      return questao_cc_4();
+    }
+    case 5: {
+      return questao_cc_5();
+    }
+    case 6: {
+      return questao_cc_6();
+    }
+    }
+  } else if (disciplina == 2) {
+    switch (num) {
+    case 1: {
+      return questao_dd_1();
+    }
+    case 2: {
+      return questao_dd_2();
+    }
+    case 3: {
+      return questao_dd_3();
+    }
+    case 4: {
+      return questao_dd_4();
+    }
+    case 5: {
+      return questao_dd_5();
+    }
+    case 6: {
+      return questao_dd_6();
+    }
+    }
+  } else if (disciplina == 3) {
+    switch (num) {
+    case 1: {
+      return questao_med_1();
+    }
+    case 2: {
+      return questao_med_2();
+    }
+    case 3: {
+      return questao_med_3();
+    }
+    case 4: {
+      return questao_med_4();
+    }
+    case 5: {
+      return questao_med_5();
+    }
+    case 6: {
+      return questao_med_6();
+    }
+    }
+  }
+}
+
+
+int repetidor_de_questao(int disciplina, int num) {
+
+  int var;
+
+  var = selecionador_de_questoes(disciplina, num);
+
+  if (var == 0) {
+    printf("\nVocê errou a questão, tente novamente.\n");
+    var = selecionador_de_questoes(disciplina, num);
+  }
+
+  return var;
+  
+}
+
+
+int tres_charadas(int disciplina) {
+
+  int num1, num2, num3, q1, q2, q3;
+
+  
+  num1 = num_aleatorio();
+
+  printf("\nMontando a prova, um minuto...\n");
+
+  do
+    {
+      num2 = num_aleatorio();
+    } while (num2 == num1);
+
+  do
+    {
+      num3 = num_aleatorio();
+    } while (num3 == num2 || num3 == num1);
+
+  q1 = repetidor_de_questao(disciplina, num1);
+
+  if (q1 == 0) {
+    printf("\nVocê errou a questão duas vezes.\n");
+    return 0;
+  }
+
+  q2 = repetidor_de_questao(disciplina, num2);
+
+  if (q2 == 0) {
+    printf("\nVocê errou a questão duas vezes.\n");
+    return 0;
+  }
+
+  q3 = repetidor_de_questao(disciplina, num3);
+
+  if (q3 == 0) {
+    printf("\nVocê errou a questão duas vezes. E repetiu na prova.\n");
+    return 0;
+  }
+
+  return 1;
   
 }

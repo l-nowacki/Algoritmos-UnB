@@ -127,9 +127,9 @@
 
     Game Over.
 
+* TODO 9. O personagem batalha com uma entidade poderosíssima que apresentará ENIGMAS e o jogador deverá acertar as respostas de 3 
 
-* TODO 9. O personagem batalha com uma entidade poderosíssima que apresentará ENIGMAS e o jogador deverá acertar as respostas de 3 CHARADAS
-  
+** comeco
   - Essa entidade pode ser uma prova da disciplina do jogador. E as dicas sobre ela podem se relacionar com a meta do jogador.
     Se o jogador tiver escolhido como meta inundar a UnB, a prova será feita em casa. E ele pode usar o google para ajudá-lo.
     Se o jogador tiver conseguido escapar para estudar em casa. As respostas do problema irão aparecer na memória dele.
@@ -306,12 +306,7 @@
      3. Imunização sativa - mecanismo, segundo o qual se introduz uma grande quantidade de elementos no organismo para 
 	a produção de ideias
 
-  3. Os sintomas mais sérios da gripe A, causada pelo vírus H1N1, foram apresentados por pessoas mais idosas e por
-     pessoas mais idosas e por gestantes. O motivo aparente é a menor imunidade desses grupos contra o vírus. Para aumentar
-     a imunidade populacional relativa ao vírus da gripe A, o governo brasileiro distribuiu vacinas para os grupos mais 
-     suscetíveis.
-
-     A vacina contra o H1N1. assim como qualquer outra vacina cntra agentes causadores de doenças infectocontagiosas,
+  3.  A vacina contra o H1N1. assim como qualquer outra vacina cntra agentes causadores de doenças infectocontagiosas,
      aumenta a imunidade das pessoas porque:
 
      1. estimula a produção de glóbulos vermelhos pela medula óssea
@@ -349,3 +344,4 @@
      2. Majoritariamente hidrofóbicos - certa
 
      3. Pouco biodegradáveis
+	
