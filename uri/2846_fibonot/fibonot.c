@@ -36,17 +36,11 @@ int fib(int number) {
   return tot;
 }
 
-int is_fib(int number) {
-  int n = 1, flag = 1;
-  while (flag) {
-    if (fib(n) == number) {
-      return 1;
-      flag = 0;
-    } else if (fib(n) > number) {
-      return 0;
-      flag = 0;
-    } else {
+int is_fib(int number) 
+{
+    int n = 1; 
+    while(fib(n) < number) 
       n++;
-    }
-  }
+    return (fib(n) == number ? 1 : 0)
 }
+
